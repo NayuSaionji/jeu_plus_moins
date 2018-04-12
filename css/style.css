@@ -1,0 +1,85 @@
+body {
+  padding: 2rem;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+#wrapper {
+  margin: auto;
+  padding: 1rem;
+  height: 300px;
+  width: 600px;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+#askUser {
+  margin-top: 2rem;
+}
+
+#askUser input {
+  width: 250px;
+  height: 40px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 10px 0 0 10px;
+}
+
+button {
+  height: 40px;
+  color: white;
+  background-color: black;
+  border: 0;
+  font-weight: bold;
+}
+
+#askUser button {
+  width: 40px;
+  border-radius: 0 10px 10px 0;
+}
+
+#reset {
+  display: none;
+  margin-top: 1rem;
+  width: 100px;
+  border-radius: 15px;
+}
+
+#reponse, #indication {
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+table, td, th {
+  border: 1px solid black;
+  height: 2rem;
+  vertical-align: middle;
+}
+
+table {
+  margin: 2rem auto;
+  width: 60%;
+  text-align: center;
+}
+
+td {
+  color: white;
+  width: 25%;
+}
+
+.win {
+  background-color: green;
+}
+
+.loose {
+  background-color: red;
+}
+
+.abandon {
+  background-color: orange;
+}
+
+#winner {
+  margin-bottom: 2rem;
+}
