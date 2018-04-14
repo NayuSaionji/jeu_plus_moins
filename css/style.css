@@ -1,21 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i');
+
+/* font-family: 'Roboto', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css?family=Gugi');
+
+/* font-family: 'Gugi', cursive; */
+
 body {
-  padding: 2rem;
   text-align: center;
-  font-family: Arial, sans-serif;
-  font-weight: bold;
+  font-family: 'Roboto', Arial, sans-serif;
 }
 
+a {
+  text-decoration: underline;
+}
+
+/* DIV #infos */
+#infos {
+  position: absolute;
+  z-index: 999;
+  width: 180px;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 0.5rem;
+  visibility: hidden;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: white;
+}
+
+/* DIV du jeu */
 #wrapper {
-  margin: auto;
+  margin: 5rem auto 0;
+  background-color: lightblue;
   padding: 1rem;
   height: 300px;
   width: 600px;
   border: 1px solid black;
   border-radius: 15px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+#btninfo {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  right: 10px;
+  background-color: #ccc;
+  color: #fff;
+  padding-top: 0.2rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 black;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#explications {
+  font-style: italic;
+  margin-top: 1rem;
 }
 
 #askUser {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 #askUser input {
@@ -24,6 +81,12 @@ body {
   text-align: center;
   border: 1px solid black;
   border-radius: 10px 0 0 10px;
+  margin-right: 0;
+}
+
+#askUser input:focus::placeholder {
+  color: white;
+  border: 0;
 }
 
 button {
@@ -32,6 +95,7 @@ button {
   background-color: black;
   border: 0;
   font-weight: bold;
+  margin-left: 0;
 }
 
 #askUser button {
@@ -41,7 +105,7 @@ button {
 
 #reset {
   display: none;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   width: 100px;
   border-radius: 15px;
 }
@@ -51,35 +115,77 @@ button {
   font-style: italic;
 }
 
-table, td, th {
+#timer {
+  position: absolute;
+  top: 80px;
+  right: -170px;
+  width: 130px;
+  height: 130px;
   border: 1px solid black;
-  height: 2rem;
-  vertical-align: middle;
-}
-
-table {
-  margin: 2rem auto;
-  width: 60%;
+  border-radius: 15px;
+  padding-top: 1.5rem;
   text-align: center;
 }
 
-td {
-  color: white;
-  width: 25%;
+#timer span {
+  font-family: 'Gugi', cursive;
+  font-size: 4rem;
+  line-height: 1.2;
 }
 
-.win {
-  background-color: green;
+#tentatives {
+  position: absolute;
+  top: 80px;
+  left: -170px;
+  width: 130px;
+  height: 130px;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding-top: 1.5rem;
+  text-align: center;
 }
 
-.loose {
-  background-color: red;
+#tentatives span {
+  font-family: 'Gugi', cursive;
+  font-size: 4rem;
+  line-height: 1.2;
 }
 
-.abandon {
-  background-color: orange;
+#colors {
+  margin: 1rem auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-#winner {
-  margin-bottom: 2rem;
+#blue,
+#grey,
+#pink {
+  margin-right: 0.5rem;
+  width: 20px;
+  height: 20px;
+}
+
+#blue {
+  background-color: lightblue;
+  border: 1px solid black;
+}
+
+#grey {
+  background-color: #eee;
+  border: 1px solid black;
+}
+
+#pink {
+  background-color: pink;
+  border: 1px solid black;
+}
+
+#me {
+  position: absolute;
+  left: 50px;
+  bottom: 5px;
+  color: #888;
+  font-size: 0.8rem;
+  font-style: italic;
 }

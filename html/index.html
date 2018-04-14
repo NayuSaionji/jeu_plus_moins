@@ -2,17 +2,37 @@
 <html lang="fr" dir="ltr">
 	<head>
 		<meta charset="utf-8">
-		<title>Challenge jour 3 - refait</title>
+		<title>Jeu du Plus ou Moins</title>
         <link rel="stylesheet" href="../css/reset.css">
 		<link rel="stylesheet" href="../css/style.css">
 	</head>
 	<body>
+        <div id="infos">
+            <p>But du jeu :</p>
+            <p>Trouver le bon nombre entre 1 et 1000.</p>
+            <p>Vous avez 10 tentatives.</p>
+            <p>Essayez de le trouver le plus vite possible !</p>
+        </div>
         <div id="wrapper">
-            <h1>Jeu du Plus ou Moins !</h1>
-            <div id="askUser"></div>
+            <div id="btninfo">i</div>
+            <h1>Jeu du Plus ou Moins</h1>
+            <div id="explications">Essayez de trouver le bon nombre !</div>
+            <div id="askUser">
+                <form>
+                    <input type="text" placeholder="Entrez un chiffre entre 1 et 1000"><button>OK</button>
+                </form>
+            </div>
             <div id="reponse"></div>
             <div id="indication"></div>
             <button id="reset">Rejouer</button>
+            <div id="tentatives">Tentatives :<br><span>10</span></div>
+            <div id="timer">Temps :<br><span>0</span></div>
+			<div id="me">Jeu créé par <a href="https://www.linkedin.com/in/julien-berrebi-b78b0815a/" target="_blank">Julien Berrebi</a>, promo Invaders, dans le cadre de ma formation chez <a href="https://oclock.io/" target="_blank">O'clock</a>.</div>
+        </div>
+        <div id="colors">
+            <div id="blue"></div>
+            <div id="grey"></div>
+            <div id="pink"></div>
         </div>
 
         <script src="../js/app.js" charset="utf-8"></script>
